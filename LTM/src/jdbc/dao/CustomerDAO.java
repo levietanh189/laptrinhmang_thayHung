@@ -67,9 +67,9 @@ public class CustomerDAO extends DAO{
         return true;
     }
     public boolean editCustomer2(Customer client){
-        String sql = "call client_update(?,?,?,?,?)";
+        String sql = "call client_update(?,?,?,?,?,?,?)";
         try{
-            PreparedStatement ps = con.prepareStatement(sql);
+            CallableStatement ps = con.prepareCall(sql);
             ps.setString(1, client.getName());
             ps.setString(2, client.getIdCard());
             ps.setString(3, client.getAddress());

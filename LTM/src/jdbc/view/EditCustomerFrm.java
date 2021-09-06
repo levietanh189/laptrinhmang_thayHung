@@ -99,7 +99,7 @@ public class EditCustomerFrm extends JFrame implements ActionListener{
             customer.setTel(txtTel.getText());
             customer.setNote(txtNote.getText());
              
-            boolean ok = (new CustomerDAO()).editCustomer(customer);
+            boolean ok = (new CustomerDAO()).editCustomer2(customer);
             if(ok) {
                 JOptionPane.showMessageDialog(this, "Update succesfully!");
                 this.dispose();
